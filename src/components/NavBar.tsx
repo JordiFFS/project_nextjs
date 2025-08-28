@@ -1,9 +1,37 @@
+import Link from 'next/link';
 import React from 'react';
+import Menu from './Menu';
+import Image from 'next/image';
+import SearchBar from './SearchBar';
+import NavIcons from './NavIcons';
 
 const NavBar: React.FC = () => {
-  return (
-    <div className='h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64'>NavBar</div>
-  );
+    return (
+        <div className='h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative'>
+            <div className="h-full flex items-center justify-between md:hidden">
+                {/* MOBILE */}
+                <Link href="/">
+                    <div className="text-2xl tracking-wide">LOGO</div>
+                </Link>
+                <Menu />
+            </div>
+            {/* DESKTOP */}
+            <div className="hidden md:flex items-center gap-8 justify-between h-full">
+                {/* Left */}
+                <div className="w-1/3">
+                    <Link href="/" className='flex items-center gap-3'>
+                        <Image src="/logo.png" alt="logo" width={85} height={35} />
+                        <div className="text-2xl tracking-wide">LOGO</div>
+                    </Link>
+                </div>
+                {/* Right */}
+                <div className="w-2/3 flex items-center justify-end gap-8">
+                    <SearchBar />
+                    <NavIcons />
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default NavBar;
