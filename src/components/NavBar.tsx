@@ -18,14 +18,19 @@ const NavBar: React.FC = () => {
             {/* DESKTOP */}
             <div className="hidden md:flex items-center gap-8 justify-between h-full">
                 {/* Left */}
-                <div className="w-1/3">
+                <div className="w-1/3 xl:w-1/2 flex items-center gap-12">
                     <Link href="/" className='flex items-center gap-3'>
                         <Image src="/logo.png" alt="logo" width={85} height={35} />
                         <div className="text-2xl tracking-wide">LOGO</div>
                     </Link>
+                    <div className="hidden xl:flex gap-4">
+                        <Link href="/">Inicio</Link>
+                        <Link href="/">Contacto</Link>
+                        <Link href="/">Login</Link>
+                    </div>
                 </div>
                 {/* Right */}
-                <div className="w-2/3 flex items-center justify-end gap-8">
+                <div className="w-2/3 xl:w-1/2 flex items-center justify-end gap-8">
                     <SearchBar />
                     <NavIcons />
                 </div>

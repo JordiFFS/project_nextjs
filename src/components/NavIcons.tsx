@@ -3,7 +3,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import { MdPerson, MdNotifications, MdMessage } from 'react-icons/md';
+import { MdPerson, MdNotifications, MdOutlineShoppingCart } from 'react-icons/md';
+import CartModal from './CartModal';
+
 
 const NavIcons = () => {
 
@@ -32,7 +34,13 @@ const NavIcons = () => {
         </div>
       )}
       <MdNotifications size={22} className='cursor-pointer' />
-      <MdMessage size={22} className='cursor-pointer'/>
+      <div className="relative cursor-pointer">
+        <MdOutlineShoppingCart size={22} className='cursor-pointer' onClick={() => setIsCartOpen((prev) => !prev)} />
+        <div className="absolute -top-4 -right-4 w-6 h-6 bg-notify rounded-full text-white text-sm flex justify-center items-center">2</div>
+      </div>
+      {isCartOpen && (
+        <CartModal />
+      )}
     </div>
   );
 };
