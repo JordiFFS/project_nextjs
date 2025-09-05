@@ -13,6 +13,7 @@ const CartModal = () => {
             ) : (
                 // Lista de productos
                 <>
+                    <h2 className="text-xl">Carrito de compras</h2>
                     <div className="flex flex-col gap-8">
                         <div className="flex gap-4">
                             <Image src="https://importadoracuevas.com/cdn/shop/files/SillaGamer100_ReclinableOficinaEscritorioErgonomica01.jpg?v=1734114267&width=1445" alt="cart-empty" width={72} height={96} className='object-cover rounded-md' />
