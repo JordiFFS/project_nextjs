@@ -3,3 +3,6 @@ export { default as Footer } from './Footer';
 export { default as Slider } from './Slider';
 export { default as ProductList } from './ProductList';
 export { default as CategoryList } from './CategoryList';
+export { default as Filter } from './Filter';
+export { default as ProductImages } from './ProductImages';
+export { default as CustomizeProducts } from './CustomizeProducts';
