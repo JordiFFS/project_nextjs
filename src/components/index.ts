@@ -6,3 +6,4 @@ export { default as CategoryList } from './CategoryList';
 export { default as Filter } from './Filter';
 export { default as ProductImages } from './ProductImages';
 export { default as CustomizeProducts } from './CustomizeProducts';
+export { default as Add } from './Add';
